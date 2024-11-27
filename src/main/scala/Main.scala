@@ -10,7 +10,7 @@ object Main {
       .getOrCreate()
 
     // Ler o arquivo CSV
-    val filePath = "caminho/para/temperatura_1000.csv"
+    val filePath = "temperatura_1000.csv"
     val df = spark.read
       .option("header", "true")
       .option("inferSchema", "true")
@@ -22,7 +22,7 @@ object Main {
       (col("Temperatura Máxima (°C)") + col("Temperatura Mínima (°C)")) / 2
     )
     val mediaGeral = tempMediaDF.agg(avg("Temperatura Média").as("Média Geral")).collect()(0)(0)
-    println(s"A temperatura média geral é: $mediaGeral%.2f°C")
+    println(s"A temperatura média geral é: $mediaGeral°C")
 
     // 2 - Dias com grande variação de temperatura (> 15°C)
     val variacaoTemperaturaDF = df.withColumn(
@@ -55,7 +55,7 @@ object Main {
 
     // 5 - Média das temperaturas máximas
     val mediaTemperaturaMaxima = df.agg(avg("Temperatura Máxima (°C)").as("Média Temperatura Máxima")).collect()(0)(0)
-    println(f"A média das temperaturas máximas é: $mediaTemperaturaMaxima%.2f°C")
+    println(f"A média das temperaturas máximas é: $mediaTemperaturaMaxima°C")
 
     // 6 - Dias com vento mais intenso (> 20 km/h)
     val diasComVentoIntenso = df.filter(
