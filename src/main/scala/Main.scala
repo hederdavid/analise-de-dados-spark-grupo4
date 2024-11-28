@@ -32,7 +32,7 @@ object Main {
     dfRenomeado.show(dfRenomeado.count().toInt, truncate = false)
 
     // Relatórios
-    //relatorios.Relatorio_1.show(dfRenomeado)
+    relatorios.Relatorio_1.show(dfRenomeado)
     //relatorios.Relatorio_2.show(dfRenomeado)
     //relatorios.Relatorio_3.show(dfRenomeado)
     //relatorios.Relatorio_4.show(dfRenomeado)
@@ -41,7 +41,7 @@ object Main {
     //relatorios.Relatorio_7.show(dfRenomeado)
     //relatorios.Relatorio_8.show(dfRenomeado)
     //relatorios.Relatorio_9.show(dfRenomeado)
-     relatorios.Relatorio_10.show(dfRenomeado)
+     //relatorios.Relatorio_10.show(dfRenomeado)
 
     spark.stop()
   }
