@@ -1,59 +1,60 @@
 package relatorios
 
 import org.apache.spark.sql.DataFrame
-import org.apache.spark.sql.functions.{avg, col}
+import org.apache.spark.sql.functions.{avg, bround, col, stddev}
+import plotly.Plotly.plot
 import plotly._
+import plotly.element.Error.Data
 import plotly.layout._
 
-object Relatorio_1 {
+object Relatorio_1 extends App {
   def show(dfRenomeado: DataFrame): Unit = {
     // Calcular a temperatura média de todos os registros
     val resultado = dfRenomeado
       .withColumn("media_temperatura", (col("temperatura_maxima") + col("temperatura_minima")) / 2)
-      .agg(avg("media_temperatura").as("temperatura_media_geral"))
+      .agg(
+        avg("media_temperatura").as("temperatura_media_geral"),
+        bround(stddev("media_temperatura"), 2).as("desvio_padrao_temperatura")  // Calculando o desvio padrão e arredondando
+      )
 
-    // Coletar o valor da média (será um único valor)
-    val temperaturaMediaGeral = resultado.collect()(0).getAs[Double]("temperatura_media_geral")
+    resultado.show(false)
+
+    // Coletar os valores da média e desvio padrão (serão valores únicos)
+    val row = resultado.collect()(0)
+    val temperaturaMediaGeral = row.getAs[Double]("temperatura_media_geral")
+    val desvioPadraoTemperatura = row.getAs[Double]("desvio_padrao_temperatura")
 
     // Criar listas para o gráfico
     val temperaturaSeq = Seq(temperaturaMediaGeral)   // Eixo Y com o valor da temperatura média
+    val desvioSeq = Seq(desvioPadraoTemperatura)      // Eixo Y para o desvio padrão
 
-    // Criar o gráfico de barras
-    val grafico = Bar(
-      x = Seq(""),  // Eixo X: Título único "Temperatura Média Geral"
-      y = temperaturaSeq   // Eixo Y: Valor da temperatura média
-    )
+    // Criar o gráfico de barras com erro no eixo Y (desvio padrão)
+    val graficoTemperatura = Bar(
+      x = Seq("Temperatura Média"),
+      y = temperaturaSeq,  // Eixo Y: Valor da temperatura média
+    ).withName("Temperatura Média")
+      .withError_y(
+        Data(array = desvioSeq)  // Adicionando o erro com o desvio padrão
+          .withVisible(true)  // Tornando o erro visível
+      )
 
     // Configurar layout do gráfico
     val layout = Layout()
-      .withTitle("Temperatura Média Geral")
-      .withXaxis(
-        Axis()
-          .withTitle("Média")
-          .withTickangle(-45)
-          .withTickfont(Font().withSize(10))
-      )
-      .withYaxis(Axis().withTitle("Temperatura"))
+      .withTitle("Temperatura Média Geral e Desvio Padrão")
+      .withXaxis(Axis().withTitle("Média e Desvio"))
+      .withYaxis(Axis().withTitle("Temperatura (°C)"))
       .withMargin(Margin(60, 30, 50, 100))
 
     // Gerar e salvar o gráfico
-    val caminhoArquivo = "temperatura_media_geral.html"
-    Plotly.plot(
+    val caminhoArquivo = "relatorios_grafico/1-temperatura_media_geral.html"
+    plot(
       path = caminhoArquivo,
-      traces = Seq(grafico),
+      traces = Seq(graficoTemperatura),
       layout = layout,
-      config = Config(),
-      useCdn = true,
       openInBrowser = true,
-      addSuffixIfExists = true
     )
-
-    println(s"Gráfico salvo e aberto no navegador: $caminhoArquivo")
   }
 }
-
-
-
 
 /*package relatorios
 

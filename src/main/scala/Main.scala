@@ -1,11 +1,10 @@
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions._
 
 object Main {
   def main(args: Array[String]): Unit = {
     // Criar a sessão do Spark
     val spark = SparkSession.builder()
-      .appName("Consulta 10 - Distribuição de Umidade ao Longo do Ano")
+      .appName("Temperatura")
       .config("spark.master", "local")
       .getOrCreate()
 
@@ -32,8 +31,8 @@ object Main {
     dfRenomeado.show(dfRenomeado.count().toInt, truncate = false)
 
     // Relatórios
-    relatorios.Relatorio_1.show(dfRenomeado)
-    //relatorios.Relatorio_2.show(dfRenomeado)
+    //relatorios.Relatorio_1.show(dfRenomeado)
+    relatorios.Relatorio_2.show(dfRenomeado)
     //relatorios.Relatorio_3.show(dfRenomeado)
     //relatorios.Relatorio_4.show(dfRenomeado)
     //relatorios.Relatorio_5.show(dfRenomeado)
