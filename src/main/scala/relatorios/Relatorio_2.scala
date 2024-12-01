@@ -18,6 +18,7 @@ object Relatorio_2 {
     )
 
     // Filtrar os dias com grande variação de temperatura (> 15°C)
+
     val dfDiasComGrandeVariacao = dfVariacaoTemperatura.filter(
       col("diferenca_temperatura") > 20
     ).select(
@@ -67,9 +68,6 @@ object Relatorio_2 {
       layout = layout,
       openInBrowser = true // Abre automaticamente no navegador
     )
-
-    // Exibir os dados selecionados
-    dfContagemCidades.show(false)
   }
 }
 

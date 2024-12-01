@@ -3,6 +3,9 @@ logs/
 *.log
 *.log.*
 
+#garantir a pasta relatorios_grafico
+!relatorios_grafico/
+
 # IntelliJ IDEA
 .idea/
 *.iml
@@ -24,7 +27,6 @@ pom.xml.next
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
-target/
 out/
 
 # Dependências de bibliotecas externas
@@ -60,7 +62,6 @@ spark-warehouse/
 spark-events/
 metastore_db/
 .derby.log
-spark-warehouse/
 eventLogs/
 *.crc
 *.snappy
