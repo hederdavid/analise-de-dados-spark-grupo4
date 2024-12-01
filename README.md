@@ -95,7 +95,8 @@ relatorios.Relatorio_2.show(dfRenomeado)
 relatorios_gerados: Contém os arquivos HTML com os resultados dos relatórios gerados.
 ### Equipe
 - Heder David
-- [Nome do membro 2]
-- [Nome do membro 3]
-- [Nome do membro 4]
-- [Nome do membro 5]
+- João Vitor Lemos
+- Júlia Carvalho
+- Luana Rocha
+- Marco Aurélio Silva
+- Rebeca Almeida
