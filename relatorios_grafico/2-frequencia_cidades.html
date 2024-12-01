@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cidades com Grande Variação de Temperatura (> 15°C)</title>
+<script src="https://cdn.plot.ly/plotly-1.52.2.min.js"></script>
+</head>
+<body>
+<div id="chart"></div>
+<script>
+(function () {
+  var data0 = {"x":["Curitiba","Belo Horizonte","Porto Alegre"],"name":"Frequência de Cidades","y":[188.0,163.0,172.0],"type":"bar","marker":{"color":"rgb(235, 134, 196)"}};
+
+  var data = [data0];
+  var layout = {"title":"Cidades com Grande Variação de Temperatura (> 15°C)","yaxis":{"title":"Quantidade de Ocorrências"},"xaxis":{"tickangle":-40.0,"title":"Cidade"},"width":800};
+ var config = {};
+
+  Plotly.plot('chart', data, layout, config);
+})();
+</script>
+</body>
+</html>
+       

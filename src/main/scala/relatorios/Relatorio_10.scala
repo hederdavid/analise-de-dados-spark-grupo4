@@ -64,7 +64,7 @@ object Relatorio_10 {
       .withYaxis(Axis().withTitle("Umidade Média (%)"))
 
     // Caminho onde o gráfico será salvo
-    val caminhoArquivo = "umidade_por_trimestre_com_desvio.html"
+    val caminhoArquivo = "relatorios_grafico/10-umidade_por_trimestre_com_desvio.html"
 
     // Gerar e salvar o gráfico
     plot(

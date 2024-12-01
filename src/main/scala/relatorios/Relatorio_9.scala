@@ -51,7 +51,7 @@ object Relatorio_9 {
       .withYaxis(Axis().withTitle("Maior Variação de Temperatura (°C)"))
 
     // Caminho onde o gráfico será salvo
-    val caminhoArquivo = "maior_variacao_temperatura_por_cidade.html"
+    val caminhoArquivo = "relatorios_grafico/9-maior_variacao_temperatura_por_cidade.html"
 
     // Gerar e salvar o gráfico
     plot(

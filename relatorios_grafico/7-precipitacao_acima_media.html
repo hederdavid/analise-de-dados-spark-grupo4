@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Frequência de Cidades com Precipitação Acima da Média</title>
+<script src="https://cdn.plot.ly/plotly-1.52.2.min.js"></script>
+</head>
+<body>
+<div id="chart"></div>
+<script>
+(function () {
+  var data0 = {"x":["Curitiba","Belo Horizonte","São Paulo","Rio de Janeiro","Porto Alegre"],"name":"Cidades com Precipitação Acima da Média","y":[78.0,70.0,86.0,82.0,80.0],"type":"bar","marker":{"color":"rgb(67, 160, 255)"}};
+
+  var data = [data0];
+  var layout = {"title":"Frequência de Cidades com Precipitação Acima da Média","yaxis":{"title":"Quantidade de Ocorrências"},"xaxis":{"tickangle":-40.0,"title":"Cidade"},"width":800};
+ var config = {};
+
+  Plotly.plot('chart', data, layout, config);
+})();
+</script>
+</body>
+</html>
+       
