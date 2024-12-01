@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Média das Temperaturas Máximas com Desvio Padrão</title>
+<script src="https://cdn.plot.ly/plotly-1.52.2.min.js"></script>
+</head>
+<body>
+<div id="chart"></div>
+<script>
+(function () {
+  var data0 = {"x":["Média das Temperaturas Máximas"],"name":"Média da Temperatura Máxima","y":[29.335299999999986],"type":"bar","marker":{"color":"rgba(255, 99, 71, 0.6)"},"error_y":{"visible":true,"array":[8.75],"type":"data"}};
+
+  var data = [data0];
+  var layout = {"title":"Média das Temperaturas Máximas com Desvio Padrão","yaxis":{"title":"Temperatura Máxima (°C)"},"xaxis":{"title":"Tipo"}};
+ var config = {};
+
+  Plotly.plot('chart', data, layout, config);
+})();
+</script>
+</body>
+</html>
+       

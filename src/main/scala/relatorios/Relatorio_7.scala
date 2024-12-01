@@ -10,7 +10,7 @@ import plotly.layout.{Axis, Layout}
 object Relatorio_7 {
   def show(dfRenomeado: DataFrame): Unit = {
     // Calcular a precipitação média
-    val dFprecipMedia = dfRenomeado.agg(avg("precipitacao").as("Precipitação Média")).collect()(0)(0).asInstanceOf[Double]
+    val dFprecipMedia = dfRenomeado.agg(avg("precipitacao")).collect()(0)(0).asInstanceOf[Double]
 
     // Filtrar os dias com precipitação acima da média
     val dfDiasComPrecipitacaoAcimaDaMedia = dfRenomeado.filter(
