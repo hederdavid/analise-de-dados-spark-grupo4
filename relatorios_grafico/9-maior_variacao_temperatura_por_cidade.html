@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Maior Variação de Temperatura por Cidade</title>
+<script src="https://cdn.plot.ly/plotly-1.52.2.min.js"></script>
+</head>
+<body>
+<div id="chart"></div>
+<script>
+(function () {
+  var data0 = {"x":["Curitiba","Porto Alegre","Belo Horizonte","Rio de Janeiro","São Paulo"],"name":"Maior Variação de Temperatura por Cidade","y":[37.1,36.199999999999996,35.5,19.700000000000003,18.8],"type":"bar","marker":{"color":"rgba(255, 69, 0, 0.6)"}};
+
+  var data = [data0];
+  var layout = {"title":"Maior Variação de Temperatura por Cidade","yaxis":{"title":"Maior Variação de Temperatura (°C)"},"xaxis":{"title":"Cidade"},"width":800};
+ var config = {};
+
+  Plotly.plot('chart', data, layout, config);
+})();
+</script>
+</body>
+</html>
+       

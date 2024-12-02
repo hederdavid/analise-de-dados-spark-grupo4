@@ -1,13 +1,12 @@
 package relatorios
 
-import org.apache.spark.sql.{DataFrame, SparkSession}
-import org.apache.spark.sql.functions.{avg, stddev, bround}
+import org.apache.spark.sql.DataFrame
+import org.apache.spark.sql.functions.{avg, bround, stddev}
 import plotly.Bar
-import plotly.layout.{Axis, Layout}
-import plotly.Plotly
 import plotly.Plotly.plot
-import plotly.element.{Color, Marker}
 import plotly.element.Error.Data
+import plotly.element.{Color, Marker}
+import plotly.layout.{Axis, Layout}
 
 object Relatorio_5 {
 

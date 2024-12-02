@@ -37,10 +37,10 @@ object Main {
     //relatorios.Relatorio_4.show(dfRenomeado)
     //relatorios.Relatorio_5.show(dfRenomeado)
     //relatorios.Relatorio_6.show(dfRenomeado)
-    relatorios.Relatorio_7.show(dfRenomeado)
+    //relatorios.Relatorio_7.show(dfRenomeado)
     //relatorios.Relatorio_8.show(dfRenomeado)
     //relatorios.Relatorio_9.show(dfRenomeado)
-    //relatorios.Relatorio_10.show(dfRenomeado)
+    relatorios.Relatorio_10.show(dfRenomeado)
 
     spark.stop()
   }

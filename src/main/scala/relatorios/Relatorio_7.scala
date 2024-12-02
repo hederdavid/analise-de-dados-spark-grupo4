@@ -1,7 +1,7 @@
 package relatorios
 
 import org.apache.spark.sql.DataFrame
-import org.apache.spark.sql.functions.{col, avg, count}
+import org.apache.spark.sql.functions.{avg, col, count}
 import plotly.Bar
 import plotly.Plotly.plot
 import plotly.element.{Color, Marker}
@@ -64,8 +64,6 @@ object Relatorio_7 {
     )
   }
 }
-
-import org.apache.spark.sql.DataFrame
 /*import org.apache.spark.sql.functions.{col, avg}
 
 object Relatorio_7 {

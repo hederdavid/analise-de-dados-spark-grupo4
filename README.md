@@ -5,6 +5,9 @@ Este é um programa desenvolvido em **Scala** e **Apache Spark** que realiza a l
 ## 📋 Propósito
 Este projeto foi desenvolvido como parte de um trabalho acadêmico da faculdade, realizado pelo **Grupo 4**.
 
+### 🔗 Acesse o Projeto
+- **[Projeto no GitHub Pages](https://hederdavid.github.io/analise-de-dados-spark-grupo4/)**
+
 ---
 
 ## ⚙️ Tecnologias Utilizadas
@@ -18,34 +21,44 @@ Este projeto foi desenvolvido como parte de um trabalho acadêmico da faculdade,
 O programa realiza as seguintes análises baseadas nos dados meteorológicos:
 
 1. **Temperaturas médias em toda a base de dados**  
-   Calcula a temperatura média entre máxima e mínima de todos os registros. Exibe apenas o valor da média.
+   Calcula a temperatura média entre máxima e mínima de todos os registros. Exibe apenas o valor da média.  
+   [🔗 Gráfico Gerado](https://hederdavid.github.io/analise-de-dados-spark-grupo4/relatorios_grafico/1-temperatura_media_geral.html)
 
 2. **Dias com grande variação de temperatura**  
-   Seleciona todos os dias em que a diferença entre a temperatura máxima e a mínima foi superior a 20°C. Exibe data, cidade, temperatura máxima e mínima.
+   Seleciona todos os dias em que a diferença entre a temperatura máxima e a mínima foi superior a 20°C. Exibe data, cidade, temperatura máxima e mínima.  
+   [🔗 Gráfico Gerado](https://hederdavid.github.io/analise-de-dados-spark-grupo4/relatorios_grafico/2-frequencia_cidades.html)
 
 3. **Dias mais chuvosos em cada cidade**  
-   Seleciona registros com precipitação maior que 50 mm. Exibe data, cidade e precipitação.
+   Seleciona registros com precipitação maior que 50 mm. Exibe data, cidade e precipitação.  
+   [🔗 Gráfico Gerado](https://hederdavid.github.io/analise-de-dados-spark-grupo4/relatorios_grafico/3-frequencia_cidades_chuvosas.html)
 
 4. **Dias de alta umidade e alta temperatura**  
-   Lista os registros com temperatura máxima acima de 30°C e umidade superior a 80%. Exibe data, cidade, temperatura máxima e umidade.
+   Lista os registros com temperatura máxima acima de 30°C e umidade superior a 80%. Exibe data, cidade, temperatura máxima e umidade.  
+   [🔗 Gráfico Gerado](https://hederdavid.github.io/analise-de-dados-spark-grupo4/relatorios_grafico/4-dias_alta_umidade_temperatura.html)
 
 5. **Temperatura média máxima em toda a base de dados**  
-   Calcula a média das temperaturas máximas de todos os registros. Exibe apenas o valor da média.
+   Calcula a média das temperaturas máximas de todos os registros. Exibe apenas o valor da média.  
+   [🔗 Gráfico Gerado](https://hederdavid.github.io/analise-de-dados-spark-grupo4/relatorios_grafico/5-media_temperatura_maxima.html)
 
 6. **Dias com vento mais intenso**  
-   Seleciona registros com velocidade do vento superior a 20 km/h. Exibe data, cidade e velocidade do vento.
+   Seleciona registros com velocidade do vento superior a 20 km/h. Exibe data, cidade e velocidade do vento.  
+   [🔗 Gráfico Gerado](https://hederdavid.github.io/analise-de-dados-spark-grupo4/relatorios_grafico/6-vento_intenso_ocorrencias.html)
 
 7. **Dias com precipitação acima da média**  
-   Calcula a precipitação média e seleciona dias com precipitação superior a esse valor médio. Exibe data, cidade e precipitação.
+   Calcula a precipitação média e seleciona dias com precipitação superior a esse valor médio. Exibe data, cidade e precipitação.  
+   [🔗 Gráfico Gerado](https://hederdavid.github.io/analise-de-dados-spark-grupo4/relatorios_grafico/7-precipitacao_acima_media.html)
 
 8. **Dias de baixa temperatura e vento forte**  
-   Filtra dias com temperatura mínima abaixo de 10°C e velocidade do vento acima de 15 km/h. Exibe data, cidade, temperatura mínima e velocidade do vento.
+   Filtra dias com temperatura mínima abaixo de 10°C e velocidade do vento acima de 15 km/h. Exibe data, cidade, temperatura mínima e velocidade do vento.  
+   [🔗 Gráfico Gerado](https://hederdavid.github.io/analise-de-dados-spark-grupo4/relatorios_grafico/8-baixa_temperatura_vento_forte.html)
 
 9. **Diferença entre temperaturas máxima e mínima**  
-   Identifica cidades com as maiores variações diárias de temperatura.
+   Identifica cidades com as maiores variações diárias de temperatura.  
+   [🔗 Gráfico Gerado](https://hederdavid.github.io/analise-de-dados-spark-grupo4/relatorios_grafico/9-maior_variacao_temperatura_por_cidade.html)
 
 10. **Distribuição de umidade ao longo do ano**  
-    Determina os trimestres mais úmidos do ano (jan-mar, abr-jun, jul-set, out-dez).
+    Determina os trimestres mais úmidos do ano (jan-mar, abr-jun, jul-set, out-dez).  
+    [🔗 Gráfico Gerado](https://hederdavid.github.io/analise-de-dados-spark-grupo4/relatorios_grafico/10-umidade_por_trimestre_com_desvio.html)
 
 ---
 

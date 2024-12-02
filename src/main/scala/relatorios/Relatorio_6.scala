@@ -1,13 +1,6 @@
 package relatorios
 
 import org.apache.spark.sql.DataFrame
-import org.apache.spark.sql.functions.{col, concat_ws}
-import plotly.Bar
-import plotly.Plotly.plot
-import plotly.element.{Color, Marker}
-import plotly.layout.{Axis, Layout}
-
-import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.functions.{col, count}
 import plotly.Bar
 import plotly.Plotly.plot
