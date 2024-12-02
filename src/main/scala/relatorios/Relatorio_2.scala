@@ -50,7 +50,7 @@ object Relatorio_2 {
 
     // Configurar layout do gráfico
     val layout = Layout()
-      .withTitle("Cidades com Grande Variação de Temperatura (> 15°C)")
+      .withTitle("Cidades com Grande Variação de Temperatura (> 20°C)")
       .withWidth(800) // Aumente bastante a largura para criar o efeito de rolagem
       .withXaxis(Axis().withTitle("Cidade").withTickangle(-40))
       .withYaxis(
