@@ -48,7 +48,6 @@ object Relatorio_7 {
     // Configurar layout do gráfico
     val layout = Layout()
       .withTitle("Frequência de Cidades com Precipitação Acima da Média")
-      .withWidth(800) // Configurar largura para melhor visualização
       .withXaxis(Axis().withTitle("Cidade").withTickangle(-40))
       .withYaxis(Axis().withTitle("Quantidade de Ocorrências"))
 

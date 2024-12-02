@@ -59,7 +59,6 @@ object Relatorio_10 {
     // Configurar layout do gráfico
     val layout = Layout()
       .withTitle("Distribuição de Umidade ao Longo do Ano por Trimestres")
-      .withWidth(800) // Largura do gráfico
       .withXaxis(Axis().withTitle("Trimestres"))
       .withYaxis(Axis().withTitle("Umidade Média (%)"))
 

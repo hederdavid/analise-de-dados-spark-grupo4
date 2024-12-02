@@ -46,7 +46,6 @@ object Relatorio_9 {
     // Configurar layout do gráfico
     val layout = Layout()
       .withTitle("Maior Variação de Temperatura por Cidade")
-      .withWidth(800) // Largura do gráfico
       .withXaxis(Axis().withTitle("Cidade"))
       .withYaxis(Axis().withTitle("Maior Variação de Temperatura (°C)"))
 

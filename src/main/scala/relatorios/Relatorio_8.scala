@@ -46,7 +46,6 @@ object Relatorio_8 {
     // Configurar layout do gráfico
     val layout = Layout()
       .withTitle("Frequência de Cidades com Baixa Temperatura e Vento Forte")
-      .withWidth(800) // Configurar largura para melhor visualização
       .withXaxis(Axis().withTitle("Cidade").withTickangle(-40))
       .withYaxis(Axis().withTitle("Quantidade de Ocorrências"))
 

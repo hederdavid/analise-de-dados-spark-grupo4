@@ -45,7 +45,6 @@ object Relatorio_6 {
     // Configurar layout do gráfico
     val layout = Layout()
       .withTitle("Frequência de Cidades com Vento Intenso (> 20 km/h)")
-      .withWidth(800) // Configurar largura para melhor visualização
       .withXaxis(Axis().withTitle("Cidade").withTickangle(-40))
       .withYaxis(Axis().withTitle("Quantidade de Ocorrências"))
 

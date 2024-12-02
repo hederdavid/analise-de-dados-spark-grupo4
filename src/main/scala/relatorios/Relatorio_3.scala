@@ -41,7 +41,6 @@ object Relatorio_3 {
     // Configurar layout do gráfico
     val layout = Layout()
       .withTitle("Cidades com Maior Precipitação (> 50 mm)")
-      .withWidth(800) // Aumente bastante a largura para criar o efeito de rolagem
       .withXaxis(Axis().withTitle("Cidade").withTickangle(-40))
       .withYaxis(Axis().withTitle("Quantidade de Ocorrências"))
 
