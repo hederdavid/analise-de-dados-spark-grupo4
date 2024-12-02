@@ -72,9 +72,10 @@ O programa realiza as seguintes análises baseadas nos dados meteorológicos:
 1. Clone este repositório:
    ```bash
    git clone https://github.com/hederdavid/analise-de-dados-spark-grupo4.git
-Abra o projeto no IntelliJ IDEA.
+   
+2. Abra o projeto no IntelliJ IDEA e instale o plugin "Scala" .
 
-2. Certifique-se de que as dependências no arquivo `build.sbt` estão corretamente configuradas:
+3. Certifique-se de que as dependências no arquivo `build.sbt` estão corretamente configuradas:
     
     ```scala
     name := "Temperatura"
@@ -87,10 +88,10 @@ Abra o projeto no IntelliJ IDEA.
     libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.5.3"
     libraryDependencies += "org.plotly-scala" %% "plotly-render" % "0.8.1"
 
-3. Verifique qual versão do JDK está sendo utilizada. Se estiver usando JDK 17 ou superior, altere para JDK 8 ou JDK 11.
+4. Verifique qual versão do JDK está sendo utilizada. Se estiver usando JDK 17 ou superior, altere para JDK 8 ou JDK 11.
     - Para ajustar a versão do JDK no IntelliJ, vá em **File > Project Structure > Project** e altere a versão para JDK 8 ou JDK 11.
 
-No arquivo `Main.scala`, localize a seção de relatórios e descomente a linha correspondente ao relatório que deseja executar. Use uma linha por vez para gerar os resultados. Exemplo:
+5. No arquivo `Main.scala`, localize a seção de relatórios e descomente a linha correspondente ao relatório que deseja executar. Use uma linha por vez para gerar os resultados. Exemplo:
 
 ```scala
 // Relatórios
